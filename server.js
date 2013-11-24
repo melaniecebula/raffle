@@ -11,11 +11,12 @@ app.configure(function() {
 });
 
 app.get("/", function(req,res) {
-    url = "https://graph.facebook.com/439024929535684/attending/?access_token=CAACEdEose0cBAE7kE7CGMVJCxIdZAmGPDh7axNyjI3TuiCjUjhxYJSxvo2Y57NO6nqBrK2YgykA75skdCJsKrZC7KK2ZBxdaPQkHAQCCADZBjYRNEEnKJELLORBjNvyuAP44AZBqY7srUhgVHlQzR680KfJmtXNEcuVCpZAaNKCWED2jcPtHopmhhjkqtDuyxYvEFZCmNyL7AZDZD"
+    url = "https://graph.facebook.com/439024929535684/attending/?access_token=CAACEdEose0cBACND7LVYyB5wBOOzl3SS5ncsbjncHXhW6M3sLtuMLkKYxg84cGQSA6jgAXu16rKvA2jEt2srdbzK826jOXN7cIc7DZAjQIdhDZB0vG2kjIgngs0IZATvHgJIv2CiSyjlyVHgNxmWq7XRX3kAtNPPKSJ9ZBc6C63aYOSuMdUIB7aPgV9plZBGTNgNC2xwj1wZDZD"
     request.get(url, function(error, response, body) {
         var data = JSON.parse(body);
         //console.log(data);
         //console.log(data["data"]);
+        //https://graph.facebook.com/endpoint?key=value&access_token=app_id|app_secret
         var people = {};
         var ppl = new Array();
         for (var person in data["data"]) {
