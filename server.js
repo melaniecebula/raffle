@@ -27,7 +27,7 @@ app.get("/", function(req,res) {
         console.log(winner);
         console.log(people[winner]);
         var id = people[winner];
-        var pic = "http://graph.facebook.com/" + id + "/picture?type=large";
+        var pic = "http://graph.facebook.com/" + id + "/picture?width=500&height=500";
         console.log(pic);
         res.render("index.ejs", {winner: winner, pic : pic});
     });
